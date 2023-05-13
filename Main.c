@@ -45,3 +45,28 @@ int main(int manyArgument, char *argument[])
 
         fclose(fpw);
     }
+
+    if(manyArgument == 2){
+        regis reg;
+        FILE *fpr = fopen("database/login.bin", "rb");
+
+        char add[3] = "#";
+        strcat(reg.username, add);
+        strcat(reg.username, reg.password);
+
+        fread(reg.username, sizeof(char), sizeof(reg.username)/sizeof(char), fpr);
+
+        fclose(fpr);
+        
+        char acc[0];
+        printf("\nFail to login !\n");
+        printf("Anda belum memasukkan password !\n");
+        printf("See your account? (y/n) "); gets(acc);
+        if (acc[0] == 'y')
+        {
+            fgets(reg.username, sizeof(reg.username), fpr);
+            printf("Your account : %s\n", reg.username);
+        }
+        printf("Note cara login : ./FileProgramUtama Username Password (harap perhatikan huruf besar dan kecil ya <3!)\n\n");
+    }
+

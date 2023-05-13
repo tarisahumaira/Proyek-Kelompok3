@@ -70,3 +70,44 @@ int main(int manyArgument, char *argument[])
         printf("Note cara login : ./FileProgramUtama Username Password (harap perhatikan huruf besar dan kecil ya <3!)\n\n");
     }
 
+  if(manyArgument == 3){
+        regis reg;
+
+        char usernameInput[10], passwordInput[10];
+        strcpy(usernameInput, argument[1]);
+        strcpy(passwordInput, argument[2]);
+        
+        FILE *fpr = fopen("database/login.bin", "rb");
+
+        fread(reg.username, sizeof(char), sizeof(reg.username)/sizeof(char), fpr);
+
+        fclose(fpr);
+
+        char *string[3];
+        char username[20], password[20];
+        int ctrl = 0;
+
+        string[0] = strtok(reg.username, "#");
+        while (string[ctrl++] != NULL){
+            string[ctrl] = strtok(NULL, "#");
+        }
+
+        strcpy(username, string[0]);
+        strcpy(password, string[1]);
+
+        if( (strcmp(usernameInput, username) != 0 ) && (strcmp(passwordInput, password) != 0)) {
+            printf("Anda Gagal login !\n");
+            exit(1);
+        } 
+        else{
+            printf("Login berhasil!");
+            printf("\n\n\t\t\t\tSelamat datang di \"UANG KAGET\"");
+            printf("\n\n\t\t\t\tJadilah jutawan dengan hanya menjawab beberapa pertanyaan!!!");
+            printf("\n\t\t\t\tTekan \"ENTER\" untuk memulai permainan!\n\n");
+            getchar();
+            soal();
+        }
+
+    }
+    return 0;
+}

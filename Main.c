@@ -183,4 +183,27 @@ void soal(){
         printf("\n\nMohon maaf jawaban anda salah\nAnda berhak membawa pulang uang sebesar Rp%d!\n\nTerima kasih telah memainkan game ini!!!", hadiah);
         exit(1);
     }
+
+    //soal keempat    
+    printf("\n\nHadiah untuk pertanyaan keempat = Rp1.600.000\n");
+    printf("\n\t\t\t\tTekan \"ENTER\" untuk menuju soal berikutnya!");
+    getchar();
+    system("cls");
+    printf("\t\t\tUang yang anda telah kumpulkan = Rp%d", hadiah);
+    printf("\n\n\t\t\tDi bawah ini merupakan fungsi untuk melakukan looping, kecuali?\n\n");
+    printf("\t\t\t\tA. While\n");
+    printf("\t\t\t\tB. Switch\n");
+    printf("\t\t\t\tC. For\n\n");
+    printf("\t\t\tJawaban anda (Jawablah menggunakan huruf kapital sesuai pilihan yang tersedia (A/B/C)) = ");
+    scanf("%c", &jawaban);
+    getchar();
+
+    if(jawaban=='B'){
+        printf("\n\nSelamat jawaban anda benar!");
+        hadiah+=1600000;
+    }
+    else{
+        printf("\n\nMohon maaf jawaban anda salah\nAnda berhak membawa pulang uang sebesar Rp%d!\n\nTerima kasih telah memainkan game ini!!!", hadiah);
+        exit(1);
+    }
 }

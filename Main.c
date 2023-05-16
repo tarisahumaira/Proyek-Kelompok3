@@ -160,4 +160,27 @@ void soal(){
         printf("\n\nMohon maaf jawaban anda salah\nAnda berhak membawa pulang uang sebesar Rp%d!\n\nTerima kasih telah memainkan game ini!!!", hadiah);
         exit(1);
     }
+
+    //soal ketiga    
+    printf("\n\nHadiah untuk pertanyaan ketiga = Rp800.000\n");
+    printf("\n\t\t\t\tTekan \"ENTER\" untuk menuju soal berikutnya!");
+    getchar();
+    system("cls");
+    printf("\t\t\tUang yang anda telah kumpulkan = Rp%d", hadiah);
+    printf("\n\n\t\t\tApakah guna dari fungsi \"scanf\" dalam bahasa C?\n\n");
+    printf("\t\t\t\tA. Melakukan percabangan\n");
+    printf("\t\t\t\tB. Mencetak output ke layar\n");
+    printf("\t\t\t\tC. Mengambil inputan user\n\n");
+    printf("\t\t\tJawaban anda (Jawablah menggunakan huruf kapital sesuai pilihan yang tersedia (A/B/C)) = ");
+    scanf("%c", &jawaban);
+    getchar();
+
+    if(jawaban=='C'){
+        printf("\n\nSelamat jawaban anda benar!");
+        hadiah+=800000;
+    }
+    else{
+        printf("\n\nMohon maaf jawaban anda salah\nAnda berhak membawa pulang uang sebesar Rp%d!\n\nTerima kasih telah memainkan game ini!!!", hadiah);
+        exit(1);
+    }
 }

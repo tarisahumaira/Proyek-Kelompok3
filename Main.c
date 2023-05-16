@@ -137,4 +137,27 @@ void soal(){
         printf("\n\nMohon maaf jawaban anda salah\nAnda berhak membawa pulang uang sebesar Rp%d!\n\nTerima kasih telah memainkan game ini!!!", hadiah);
         exit(1);
     }
+    
+    //soal kedua    
+    printf("\n\nHadiah untuk pertanyaan kedua = Rp400.000\n");
+    printf("\n\t\t\t\tTekan \"ENTER\" untuk menuju soal berikutnya!");
+    getchar();
+    system("cls");
+    printf("\t\t\tUang yang anda telah kumpulkan = Rp%d", hadiah);
+    printf("\n\n\t\t\tApakah guna dari fungsi \"printf\" pada bahasa C?\n\n");
+    printf("\t\t\t\tA. Mencetak input\n");
+    printf("\t\t\t\tB. Mencetak output ke layar komputer\n");
+    printf("\t\t\t\tC. Membuat perulangan\n\n");
+    printf("\t\t\tJawaban anda (Jawablah menggunakan huruf kapital sesuai pilihan yang tersedia (A/B/C)) = ");
+    scanf("%c", &jawaban);
+    getchar();
+
+    if(jawaban=='B'){
+        printf("\n\nSelamat jawaban anda benar!");
+        hadiah+=400000;
+    }
+    else{
+        printf("\n\nMohon maaf jawaban anda salah\nAnda berhak membawa pulang uang sebesar Rp%d!\n\nTerima kasih telah memainkan game ini!!!", hadiah);
+        exit(1);
+    }
 }

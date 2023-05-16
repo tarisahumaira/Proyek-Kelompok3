@@ -206,4 +206,27 @@ void soal(){
         printf("\n\nMohon maaf jawaban anda salah\nAnda berhak membawa pulang uang sebesar Rp%d!\n\nTerima kasih telah memainkan game ini!!!", hadiah);
         exit(1);
     }
+
+    //soal kelima    
+    printf("\n\nHadiah untuk pertanyaan kelima = Rp3.000.000\n");
+    printf("\n\t\t\t\tTekan \"ENTER\" untuk menuju soal berikutnya!");
+    getchar();
+    system("cls");
+    printf("\t\t\tUang yang anda telah kumpulkan = Rp%d", hadiah);
+    printf("\n\n\t\t\t\"i++\" merupakan contoh dari perintah?\n\n");
+    printf("\t\t\t\tA. Increment\n");
+    printf("\t\t\t\tB. Decrement\n");
+    printf("\t\t\t\tC. Nested loop\n\n");
+    printf("\t\t\tJawaban anda (Jawablah menggunakan huruf kapital sesuai pilihan yang tersedia (A/B/C)) = ");
+    scanf("%c", &jawaban);
+    getchar();
+
+    if(jawaban=='A'){
+        hadiah+=3000000;
+        printf("\n\nSelamat jawaban anda benar dan anda telah memenangkan game ini!\nAnda berhak membawa pulang uang tunai sebesar Rp%d!\n\nTerima kasih telah memainkan game ini!!!", hadiah);
+    }
+    else{
+        printf("\n\nMohon maaf jawaban anda salah\nAnda berhak membawa pulang uang sebesar Rp%d!\n\nTerima kasih telah memainkan game ini!!!", hadiah);
+        exit(1);
+    }
 }

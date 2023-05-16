@@ -111,3 +111,30 @@ int main(int manyArgument, char *argument[])
     }
     return 0;
 }
+void soal(){
+    int hadiah=0; 
+    char jawaban;
+
+    //soal pertama   
+    printf("\n\nHadiah untuk pertanyaan pertama = Rp200.000\n");
+    printf("\n\t\t\t\tTekan \"ENTER\" untuk menuju ke soal pertama!");
+    getchar();
+    system("cls");
+    printf("\t\t\tUang yang anda telah kumpulkan = Rp%d", hadiah);
+    printf("\n\n\t\t\tApakah kepanjangan dari library \"stdio\" pada bahasa C?\n\n");
+    printf("\t\t\t\tA. Standar Input Output\n");
+    printf("\t\t\t\tB. Standar Initial Output\n");
+    printf("\t\t\t\tC. Standar Input Online\n\n");
+    printf("\t\t\tJawaban anda (Jawablah menggunakan huruf kapital sesuai pilihan yang tersedia (A/B/C)) = ");
+    scanf("%c", &jawaban);
+    getchar();
+
+    if(jawaban=='A'){
+        printf("\n\nSelamat jawaban anda benar!");
+        hadiah+=200000;
+    }
+    else{
+        printf("\n\nMohon maaf jawaban anda salah\nAnda berhak membawa pulang uang sebesar Rp%d!\n\nTerima kasih telah memainkan game ini!!!", hadiah);
+        exit(1);
+    }
+}
